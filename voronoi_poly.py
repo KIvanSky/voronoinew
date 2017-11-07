@@ -521,20 +521,20 @@ def get_quadkeystr(quadkey):
 #Zoom in!!
 def GridMap(quadkey="", ploygons_to_lookat=None):
 
-  #mercator = globalmaptiles.GlobalMercator()
+  mercator = globalmaptiles.GlobalMercator()
  
   global PlotIt
 
-  for quadkeyadd in range():
+  for quadkeyadd in range(4):
     curQuadKey=quadkey+str(quadkeyadd)
 
-    #tx, ty, zl=mercator.QuadTree2TMS(curQuadKey)
-    #grid_latlon=mercator.TileLatLonBounds(tx, ty, zl)
-    # print grid_latlon
+    tx, ty, zl=mercator.QuadTree2TMS(curQuadKey)
+    grid_latlon=mercator.TileLatLonBounds(tx, ty, zl)
 
-    #polygon=polygonize_grid(grid_latlon)
-    polygon =
-    print polygon
+
+    polygon=polygonize_grid(grid_latlon)
+
+
 
     obj_polygon=Polygon(polygon)
 
